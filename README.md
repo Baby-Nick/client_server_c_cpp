@@ -1,6 +1,7 @@
 # client_server_c_cpp
 It's a simple example of client -server application via c/c++ based on sockets.
 
+	
 # build
 
 To build server app use:
@@ -21,5 +22,6 @@ To run client app use:
 
 It's a simple example how to send-resieve message via sockets. This example is working on localhost(127.0.0.1) and port 9991.
 
-Cliend send message from keyboard, wait answer and print it.
-Server wait request (while(true)), read messagem print it and send response to client. But just one time. After one request loop will stop.
+There are a few branches:	
+	"Basic" - include basic functions. The server listens to just one request and gives just one response. The same thing does the client. It just sends a request to the server and waits for one response.
+	"Endless work" - includes basic functions, but the server works till it gets a "stop" request. The client sends requests till the user doesn't type the "stop" command.
